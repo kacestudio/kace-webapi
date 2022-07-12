@@ -23,7 +23,7 @@ const WebApi = require("kace-webapi")
 WebApi.mixin({
   hello: function() {
     return this.request()
-      .withPath("http://google.com")
+      .withPath("https://swapi.dev/api/people")
       .build()
       .execute("GET")
   }

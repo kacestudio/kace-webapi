@@ -3,6 +3,7 @@ import Request from "./libs/request"
 class WebApi {
   constructor(credentials) {
     this._credentials = credentials || {}
+    this._request = Request.builder()
   }
 
   setCredentials(credentials) {
@@ -71,9 +72,11 @@ class WebApi {
     if (!this._credentials) return
     this._credentials[key] = null
   }
-
+  requestUsing(callback) {
+    
+  }
   request() {
-    return Request.builder()
+    return this._request
   }
 
   static mixin(properties) {

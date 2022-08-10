@@ -1,6 +1,6 @@
 {
   "name": "kace-webapi",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "module": "dist/webapi.esm.js",
   "main": "dist/webapi.umd.js",
@@ -13,7 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.27.2",
-    "querystring": "^0.2.1"
+    "qs": "^6.11.0"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^13.3.0",

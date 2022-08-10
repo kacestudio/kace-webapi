@@ -1,5 +1,5 @@
 const axios = require("axios").default
-const querystring = require("querystring")
+const qs = require("qs")
 
 const _getParametersFromRequest = function (request) {
   const options = {}
@@ -17,7 +17,7 @@ const _getParametersFromRequest = function (request) {
     request.getHeaders() &&
     request.getHeaders()["Content-Type"] === "application/x-www-form-urlencoded"
   ) {
-    options.data = querystring.stringify(request.getBodyParameters())
+    options.data = qs.stringify(request.getBodyParameters())
   } else if (request.getBodyParameters()) {
     options.data = request.getBodyParameters()
   }
